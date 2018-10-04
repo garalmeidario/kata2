@@ -6,16 +6,16 @@ import java.util.Map;
 
 
 
-public class Histogram {
-    private final int [] data;
-    private Map<Integer, Integer> histogram= new HashMap<>();
+public class Histogram<T>{
+    private final T [] data;
+    private Map<T, Integer> histogram= new HashMap<>();
     
-    public Histogram(int [] data) {
+    public Histogram(T [] data) {
         this.data = data;
     }
 
     public Map getHistogram(){
-        for (int i : data) {
+        for (T i : data) {
             histogram.put(i, histogram.containsKey(i) ? histogram.get(i) + 1 : 1);
         }
         return histogram;
