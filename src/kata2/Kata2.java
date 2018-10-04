@@ -9,6 +9,7 @@ public class Kata2 {
         String data [] = {"Darío", "Alexis", "Darío", "Ainhoa", "Darío", "Alexis", "Ana", "Darío", "Ainhoa"};
         Histogram histo  = new Histogram(data);
         
+        
         Map<Integer,Integer> histogr = histo.getHistogram();
         
         for (Map.Entry<Integer, Integer> entry : histogr.entrySet()) {
